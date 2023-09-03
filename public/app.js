@@ -32,6 +32,20 @@ const ticTacToe = (element, index) => {
 
 };
 
+const checkWin= ()=> {
+    for (let i = 0; i < conditions.length; i++) {
+        const [a, b, c] = conditions[i];
+        if (cells[a] && cells[a] === cells[b] && cells[a] === cells[c]) {
+            return true;
+        }
+    }
+    return false; 
+};
+
+const isGameFinished= () => {
+    return cells.every((cell) => cell !== ''); 
+};
+
    
 const resetGame = () => {
 
