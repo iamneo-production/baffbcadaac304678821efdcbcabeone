@@ -59,22 +59,16 @@ h1{
     font-size: 25px; 
 }
 
-.reset-section {
-    text-align: center; /* Centered reset section */
+.reset {
+    border: 1px solid #000; 
+    color: #000; 
+    cursor: pointer; 
+    padding: 5px 10px; 
+    margin: 10px; 
+    transition: background-color 0.3s, color 0.3s; 
 }
 
-/* Reset Button Styling */
-.reset-button {
-    border: 1px solid #000; /* Black border for reset button */
-    color: #000; /* Black text color for reset button */
-    cursor: pointer; /* Cursor style */
-    padding: 5px 10px; /* Padding for spacing */
-    margin: 10px; /* Margin for spacing */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
-}
-
-/* Reset Button Hover Styling */
-.reset-button:hover {
+.reset:hover {
     background-color: #000; 
     color: #fff; 
 }
