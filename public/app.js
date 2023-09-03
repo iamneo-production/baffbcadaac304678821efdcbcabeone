@@ -16,26 +16,18 @@ let conditions = [
 
 const ticTacToe = (element, index) => {
     
-    
-    const winCombos = [
-        [0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]
-    ];
+    if (cells[index] === '' && !isGameFinished()) {
+        // Set the current player's symbol on the cell
+        cells[index] = currentPlayer;
+        button.textContent = currentPlayer;
 
-    for (const combo of winCombos) 
-    {
-        const [a, b, c] = combo;
-        if (board[a] && board[a] === board[b] && board[a] === board[c])
-         {
-            gameOver = true;
-            document.querySelector(".result-text").textContent = `${currentPlayer} wins!`;
-            document.querySelector(".reset-button").disabled = false;
+        // Check for a win
+        if (checkWin()) {
+            result.textContent = `${currentPlayer} wins!`;
+        } else {
+            // Switch to the next player
+            currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
         }
-    }
-
-    if (!board.includes("") && !gameOver) {
-        gameOver = true;
-        document.querySelector(".result-text").textContent = "It's a draw!";
-        document.querySelector(".reset-button").disabled = false;
     }
 
 };
