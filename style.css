@@ -33,4 +33,48 @@ h1{
     cursor:pointer;
 }
 
-.btn
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.9); 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+.btn:disabled {
+    color: #000; 
+    cursor: no-drop; 
+}
+
+.result-container {
+    background-color: rgba(255, 255, 255, 0.8); 
+    border: 2px solid #fff; 
+    text-align: center; 
+    max-width: 200px; 
+    margin: 20px auto; 
+    padding: 10px; 
+}
+
+.result {
+    color: #fff; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+    font-size: 25px; 
+}
+
+.reset-section {
+    text-align: center; /* Centered reset section */
+}
+
+/* Reset Button Styling */
+.reset-button {
+    border: 1px solid #000; /* Black border for reset button */
+    color: #000; /* Black text color for reset button */
+    cursor: pointer; /* Cursor style */
+    padding: 5px 10px; /* Padding for spacing */
+    margin: 10px; /* Margin for spacing */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+}
+
+/* Reset Button Hover Styling */
+.reset-button:hover {
+    background-color: #000; 
+    color: #fff; 
+}
